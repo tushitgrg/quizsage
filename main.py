@@ -162,7 +162,7 @@ def index():
           os.path.join(os.path.abspath(os.path.dirname(__file__)),
                        app.config['UPLOAD_FOLDER'], filename))
 
-        imagelink = "https://quizsage.tushitgarg.repl.co/static/uploads/" + userid + "/"+filename
+        imagelink = "https://quizsage.tushitgarg.com/static/uploads/" + userid + "/"+filename
         imagelinks = imagelinks + imagelink + "@@"
       url = f"https://tushitgarg.pythonanywhere.com/api/{qytype}/{qno}?url={imagelinks}"
 
