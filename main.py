@@ -13,7 +13,7 @@ indian_timezone = pytz.timezone('Asia/Kolkata')
 app = Flask(__name__)
 oauth = OAuth(app)
 
-app.secret_key = "123"
+app.secret_key = "1234"
 app.config.from_object('config')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///quizdb.sqlite3"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
