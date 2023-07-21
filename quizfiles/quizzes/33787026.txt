@@ -1,0 +1,19 @@
+1. According to the text, which hydride is the most stable?
+a) PH
+b) SbH
+c) BiH
+d) NH
+
+2. What is the order of the reducing character of the group 15 hydrides?
+a) NH, > PH > AsH > SbH > BiH
+b) BiH > SbH > AsH > PH > NH
+c) NH > PH > AsH > SbH > BiH
+d) BiH > SbH > AsH > PH > NH
+
+3. Why does the boiling point increase down the group for the hydrides of group 15 elements?
+a) Due to an increase in size
+b) Due to a decrease in size
+c) Due to an increase in covalent bond strength
+d) Due to a decrease in covalent bond strength%%%%1. c) BiH
+2. d) BiH > SbH > AsH > PH > NH
+3. a) Due to an increase in size

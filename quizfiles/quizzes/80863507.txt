@@ -1,0 +1,19 @@
+1) Which of the following is an example of a monodentate ligand involved in linkage isomerism?
+a) CO3
+b) SCN/NCS
+c) NO3
+d) Cl-
+
+2) Linkage isomerism occurs when ambidentate ligands are capable of coordinating in _____ ways.
+a) one
+b) two
+c) three
+d) four
+
+3) The (NO2) ion is an example of a ligand that can bind to the central atom through _____.
+a) sulfur or oxygen
+b) nitrogen or carbon
+c) carbon or oxygen
+d) nitrogen or oxygen%%%%1) b) SCN/NCS
+2) b) two
+3) a) sulfur or oxygen

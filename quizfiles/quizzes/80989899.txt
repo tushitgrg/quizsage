@@ -1,0 +1,21 @@
+1) Which of the following statements accurately defines isomerism?
+a) The separation of a molecule into its constituent elements.
+b) The ability of molecules with the same molecular formula to exist in different arrangements or spatial orientations.
+c) The transformation of a substance from one physical state to another.
+d) The conversion of one compound into another by the introduction of oxygen.
+
+2) Which type of isomerism occurs when two compounds have the same molecular formula but differ in the connectivity or order of atoms?
+a) Geometric isomerism
+b) Structural isomerism
+c) Optical isomerism
+d) Functional isomerism
+
+3) Which of the following is an example of optical isomerism?
+a) The conversion of an alkene into an alkane.
+b) The presence of multiple double bonds in a hydrocarbon chain.
+c) The existence of left-handed and right-handed forms of a molecule.
+d) The arrangement of atoms around a double bond in a cyclic compound.%%%%1) b) The ability of molecules with the same molecular formula to exist in different arrangements or spatial orientations.
+
+2) b) Structural isomerism
+
+3) c) The existence of left-handed and right-handed forms of a molecule.

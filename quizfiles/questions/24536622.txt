@@ -1,0 +1,13 @@
+1. What is isomerism and how does it occur in organic chemistry?
+2. Explain the different types of isomerism, including structural isomerism and stereoisomerism.
+3. How does isomerism impact the physical and chemical properties of organic compounds?%%%%1. Isomerism is a phenomenon in organic chemistry where molecules with the same molecular formula have different structures or arrangements of their atoms. It occurs due to the different ways atoms can be connected, leading to distinct chemical and physical properties.
+
+2. There are two main types of isomerism: structural isomerism and stereoisomerism. 
+   - Structural isomerism refers to molecules with the same molecular formula but different connectivity or arrangement of atoms. These isomers may have different functional groups or branching patterns. Examples include chain isomerism, positional isomerism, and functional group isomerism.
+   - Stereoisomerism, on the other hand, involves molecules with the same molecular formula and connectivity but differ in spatial arrangement. This can occur due to the presence of double bonds or chiral centers. Stereoisomerism can be further divided into geometric (cis-trans) isomerism and optical isomerism (enantiomerism).
+
+3. Isomerism has a significant impact on the physical and chemical properties of organic compounds. 
+   - Physical properties such as boiling point, melting point, and solubility can be different between isomers due to variations in molecular size, shape, and polarity.
+   - Chemical properties can also differ among isomers, as the different arrangements of atoms or functional groups can lead to variations in reactivity and chemical reactions.
+   - Isomerism is crucial in designing drugs as different isomers can have different biological activities and interactions with target molecules or enzymes.
+   - In industry, isomerism plays a role in determining the properties and uses of various chemicals, allowing for optimization of specific characteristics based on the desired application.

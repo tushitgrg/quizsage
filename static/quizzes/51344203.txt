@@ -1,0 +1,8 @@
+1. What is the concept of linkage isomerism in coordination compounds?
+2. Can you provide an example of an ambidentate ligand?
+3. How does an ambidentate ligand differ from a polydentate ligand? %%%%
+1. The concept of linkage isomerism in coordination compounds involves ambidentate ligands that are capable of coordinating in more than one way. It occurs when the ligand can bind to the central ion through different atoms. For example, the ligand (NO3) can bind to the central atom through the nitrogen or the oxygen atom.
+
+2. An example of an ambidentate ligand is the thiocyanate ion (SCN-). It can bind to the central ion either through sulfur or nitrogen.
+
+3. An ambidentate ligand differs from a polydentate ligand in that it can bind to the central atom through different atoms, but it can only bind to the central atom through one atom at a time. In contrast, a polydentate ligand can bind to the central atom with multiple atoms simultaneously.

@@ -1,0 +1,19 @@
+1) Which group 15 hydride has the highest reducing character?
+a) NH3
+b) PH3
+c) AsH3
+d) SbH3
+
+2) What is the order of thermal stability of group 15 hydrides?
+a) NH3 > PH3 > AsH3 > SbH3 > BiH3
+b) BiH3 > SbH3 > AsH3 > PH3 > NH3
+c) NH3 > BiH3 > AsH3 > SbH3 > PH3
+d) PH3 > NH3 > AsH3 > BiH3 > SbH3
+
+3) Which hydride has the lowest boiling point among group 15 elements?
+a) NH3
+b) PH3
+c) AsH3
+d) SbH3%%%%1) d) SbH3
+2) b) BiH3 > SbH3 > AsH3 > PH3 > NH3
+3) b) PH3

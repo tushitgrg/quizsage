@@ -1,0 +1,7 @@
+1. What is the concept of linkage isomerism and how does it occur?
+2. How do ambidentate ligands contribute to linkage isomerism?
+3. Can you provide an example of a ligand that exhibits ambidentate behavior in linkage isomerism?%%%%1. Linkage isomerism refers to the phenomenon where coordination compounds exhibit different ligand coordination arrangements while keeping the same overall formula. It occurs when the ligands in a compound, particularly ambidentate ligands, are able to bind to the central atom in more than one way. This results in different isomers with the same chemical formula but different bond connectivity.
+
+2. Ambidentate ligands play a key role in the occurrence of linkage isomerism because they have multiple donor atoms that can coordinate with the central atom. Due to their flexibility, these ligands can form different coordination arrangements, leading to the formation of linkage isomers. For example, the ligand SCN-/NCS- can bind through either the sulfur atom or the nitrogen atom, resulting in different linkage isomers.
+
+3. An example of a ligand that exhibits ambidentate behavior in linkage isomerism is the nitrito ligand (NO2-). The nitrito ligand can coordinate with the central atom through either the nitrogen atom or the oxygen atom. Hence, it can form different linkage isomers depending on which atom is bonded to the central atom.

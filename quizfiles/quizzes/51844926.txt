@@ -1,0 +1,26 @@
+1. According to the text, which hydride has the smallest size among the group 15 elements?
+a) NH3
+b) PH3
+c) AsH3
+d) SbH3
+
+2. What is the order of decreasing thermal stability of group 15 hydrides?
+a) NH3 > PH3 > AsH3 > SbH3 > BiH3
+b) PH3 > NH3 > AsH3 > SbH3 > BiH3
+c) NH3 > BiH3 > PH3 > AsH3 > SbH3
+d) BiH3 > NH3 > PH3 > AsH3 > SbH3
+
+3. How does the reducing character of group 15 hydrides change as we go from NH3 to BiH3?
+a) Increases
+b) Decreases
+c) Remains the same
+d) Cannot be determined
+
+4. Which hydride among the group 15 elements has the highest boiling point?
+a) NH3
+b) PH3
+c) AsH3
+d) SbH3%%%%1. b) PH3
+2. b) PH3 > NH3 > AsH3 > SbH3 > BiH3
+3. a) Increases
+4. a) NH3

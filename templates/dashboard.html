@@ -1,0 +1,82 @@
+<!doctype html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+ 
+  <style>
+body {
+  background: black;
+  color:white;
+}
+#tablediv{
+  margin-left:10%;
+  margin-right:10%;
+  align-items:center;
+  text-align:center;
+  
+}
+
+.btn-primary{
+
+  background:#FFD7B3;
+  color:black;
+}
+
+</style>
+  
+  
+  
+  </head>
+  <body>
+   
+
+    
+    <div id="tablediv">
+ <h1><br/>Hello {{uname}}</h1>
+ 
+    <script src="https://cdn.jsdelivr.net/npcolor: white;@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<br/><br/>
+
+{% if timecreated|length > 0 %}
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Sno.</th>
+      <th scope="col">Quiz Name</th>
+      <th scope="col">Time Created</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for name,quizid in data %}
+    {% set link = "https://quizsage.tushitgarg.repl.co/check/" + quizid%}
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>{{name}}</td>
+      <td>{{timecreated[loop.index0]}}</td>
+      
+      <td><a class="btn btn-primary" href="/check/{{quizid}}" role="button">View</a></td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+ <a class="btn btn-primary" href="/makequiz" role="button" style="margin:10px">New Quiz!</a>
+    <a class="btn btn-primary" href="/logout" role="button" style="margin:10px">Logout</a>
+    
+  </body>
+</html>
+</div>
+
+{% else %}
+<h3>You Have No Quiz! Create One!</h3>
+{% endif %}
+
+
+

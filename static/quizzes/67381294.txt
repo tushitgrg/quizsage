@@ -1,0 +1,8 @@
+1. What is the concept of linkage isomerism?
+2. Which monodentate ligands are known for exhibiting linkage isomerism?
+3. What is the difference between an ambidentate ligand and a polydentate ligand?
+1. The concept of linkage isomerism is when ambidentate ligands, which have multiple possible coordination sites, bind to a central ion in different ways. This results in a different arrangement of atoms in the compound, creating linkage isomers.
+
+2. Monodentate ligands such as SCN-/NCS- and NO2-/ONO- are known for exhibiting linkage isomerism. These ligands can bind to the central ion through different atoms, resulting in different coordination isomers.
+
+3. The difference between an ambidentate ligand and a polydentate ligand is that an ambidentate ligand has more than one possible coordination site but only binds to the central ion through one site at a time. In contrast, a polydentate ligand has multiple donor atoms and can bind to the central ion through multiple sites simultaneously.

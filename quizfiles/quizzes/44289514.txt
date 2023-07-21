@@ -1,0 +1,26 @@
+1. What is the term for isomerism that occurs with ambidentate ligands?
+a) Coordination isomerism
+b) Linkage isomerism
+c) Polydentate isomerism
+d) Monodentate isomerism
+
+2. Which of the following ligands can coordinate to the central atom through multiple donor atoms?
+a) SCN/NCS
+b) NO/ONO
+c) Both a and b
+d) None of the above
+
+3. What is the main difference between coordination isomerism and linkage isomerism?
+a) The number of donor atoms
+b) The way ligands bind to the central ion
+c) The type of ligands involved
+d) The arrangement of ligands around the central ion
+
+4. What is the term used for a ligand that can bind to the central atom through different donor atoms, but not simultaneously?
+a) Polydentate ligand
+b) Monodentate ligand
+c) Ambidentate ligand
+d) Ambiguous ligand%%%%1. c) Polydentate isomerism
+2. c) Both a and b
+3. b) The way ligands bind to the central ion
+4. c) Ambidentate ligand

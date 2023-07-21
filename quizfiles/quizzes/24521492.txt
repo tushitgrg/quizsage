@@ -1,0 +1,19 @@
+1) According to the text, which of the following hydrides of group 15 elements is the most stable?
+a) PH
+b) AsH3
+c) SbH3
+d) BiH3
+
+2) The reducing character of the hydrides of group 15 elements increases in what order?
+a) NH3 < PH3 < AsH3 < SbH3 < BiH3
+b) PH3 < NH3 < AsH3 < SbH3 < BiH3
+c) BiH3 < SbH3 < AsH3 < PH3 < NH3
+d) NH3 < PH3 < AsH3 < BiH3 < SbH3
+
+3) Which hydride of group 15 elements has the highest boiling point?
+a) NH3
+b) PH3
+c) AsH3
+d) SbH3%%%%1) d) BiH3
+2) c) BiH3 < SbH3 < AsH3 < PH3 < NH3
+3) c) AsH3
