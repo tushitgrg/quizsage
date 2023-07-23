@@ -172,12 +172,15 @@ def index():
       imagelinks = ""
       for file in files:
         filename = secure_filename(file.filename)
-        file.save(
+        try:
+          file.save(
           os.path.join(os.path.abspath(os.path.dirname(__file__)),
                        app.config['UPLOAD_FOLDER'], filename))
-
-        imagelink = "https://quizsage.vercel.app/static/uploads/" + userid + "/" + filename
-        imagelinks = imagelinks + imagelink + "@@"
+        
+          imagelink = "https://quizsage.vercel.app/static/uploads/" + userid + "/" + filename
+          imagelinks = imagelinks + imagelink + "@@"
+        except:
+          pass
       url = f"https://tushitgarg.pythonanywhere.com/api/{qytype}/{qno}?url={imagelinks}"
 
     else:
