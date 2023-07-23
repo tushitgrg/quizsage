@@ -71,6 +71,7 @@ def has_numbers(inputString):
 
 @app.route('/')
 def home():
+  
   return render_template("home.html")
 
 
@@ -250,7 +251,10 @@ def questions(quizid):
         cleananswers.append(i)
       else:
         pass
+
+    
   data = zip(cleanquestions, cleananswers)
+
 
   return render_template('questions.html', data=data, quizname=quizname)
 

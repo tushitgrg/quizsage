@@ -1,0 +1,10 @@
+1. What is the concept of linkage isomerism and how does it occur with ambidentate ligands?
+2. Can you give examples of monodentate ligands that demonstrate linkage isomerism?
+3. How does an ambidentate ligand bind to a central ion in the case of linkage isomerism?
+4. What is the difference between an ambidentate ligand and a polydentate ligand in the context of linkage isomerism?%%%%1. The concept of linkage isomerism involves ambidentate ligands, which are ligands capable of coordinating in more than one way. In the case of linkage isomerism, the ligand can bind to the central ion through different atoms. For example, ambidentate ligands like SCN- and NCS- can bind to the central ion through either the sulfur or the nitrogen atom. This results in different isomers of the compound.
+
+2. Examples of monodentate ligands that demonstrate linkage isomerism are the ligands SCN- and NCS-. These ligands can coordinate to a central ion through either the sulfur or the nitrogen atom, resulting in different linkage isomers.
+
+3. In the case of linkage isomerism, an ambidentate ligand binds to the central ion through one atom at a time. For example, the (NO2) ligand can bind to the central atom through either the nitrogen or the oxygen atom, but not both simultaneously. Depending on the specific binding atom, different isomers can be formed.
+
+4. The difference between an ambidentate ligand and a polydentate ligand in the context of linkage isomerism is that an ambidentate ligand can bind to the central ion through different atoms, but only one at a time. On the other hand, a polydentate ligand has multiple donor atoms and can bind to the central ion through multiple atoms simultaneously.
