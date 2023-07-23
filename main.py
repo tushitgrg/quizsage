@@ -174,13 +174,13 @@ def index():
         filename = secure_filename(file.filename)
         try:
           file.save(
-          os.path.join(os.path.abspath(os.path.dirname(__file__)),
-                       app.config['UPLOAD_FOLDER'], filename))
-        
-          imagelink = "https://quizsage.vercel.app/static/uploads/" + userid + "/" + filename
-          imagelinks = imagelinks + imagelink + "@@"
+            os.path.join(os.path.abspath(os.path.dirname(__file__)),
+                         app.config['UPLOAD_FOLDER'], filename))
         except:
           pass
+          imagelink = "https://quizsage.vercel.app/static/uploads/" + userid + "/" + filename
+          imagelinks = imagelinks + imagelink + "@@"
+
       url = f"https://tushitgarg.pythonanywhere.com/api/{qytype}/{qno}?url={imagelinks}"
 
     else:
