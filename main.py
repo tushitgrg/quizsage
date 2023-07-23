@@ -8,6 +8,7 @@ from authlib.integrations.flask_client import OAuth
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import pytz
+
 indian_timezone = pytz.timezone('Asia/Kolkata')
 
 app = Flask(__name__)
@@ -19,22 +20,26 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///quizdb.sqlite3"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CONF_URL = 'https://accounts.google.com/.well-known/openid-configuration'
+
+
 def clear_directory(directory_path):
-    try:
-       
-        items = os.listdir(directory_path)
-        for item in items:
-            item_path = os.path.join(directory_path, item)
-            if os.path.isfile(item_path):
-                
-                os.remove(item_path)
-            elif os.path.isdir(item_path):
-                
-                clear_directory(item_path)
-                
-                os.rmdir(item_path)
-    except Exception as e:
-        print(f"Error clearing directory: {e}")
+  try:
+
+    items = os.listdir(directory_path)
+    for item in items:
+      item_path = os.path.join(directory_path, item)
+      if os.path.isfile(item_path):
+
+        os.remove(item_path)
+      elif os.path.isdir(item_path):
+
+        clear_directory(item_path)
+
+        os.rmdir(item_path)
+  except Exception as e:
+    print(f"Error clearing directory: {e}")
+
+
 class quizdb(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   userid = db.Column(db.String(100))
@@ -42,22 +47,18 @@ class quizdb(db.Model):
   quizname = db.Column(db.String(100))
   quizcategory = db.Column(db.String(100))
   timecreated = db.Column(db.String(100))
-  def __init__(self,userid,quizid,quizname,quizcategory,timecreated):
+
+  def __init__(self, userid, quizid, quizname, quizcategory, timecreated):
     self.userid = userid
     self.quizid = quizid
     self.quizname = quizname
     self.quizcategory = quizcategory
     self.timecreated = timecreated
 
-oauth.register(
-    name='google',
-    server_metadata_url=CONF_URL,
-    client_kwargs={
-        'scope': 'openid email profile'
-    }
-)
 
-
+oauth.register(name='google',
+               server_metadata_url=CONF_URL,
+               client_kwargs={'scope': 'openid email profile'})
 
 
 def split_list(lst, size):
@@ -67,16 +68,21 @@ def split_list(lst, size):
 def has_numbers(inputString):
   return any(char.isdigit() for char in inputString)
 
+
 @app.route('/')
 def home():
-  
-  
+  return render_template("home.html")
+
+
+@app.route('/dashboard')
+def dashboard():
+
   try:
     user = session.get('user')
     name = user['name']
-  
+
   except:
-    return render_template("upl.html")
+    return render_template("home.html")
   email = user['email']
   email = email.split('@')
   userid = email[0]
@@ -88,47 +94,54 @@ def home():
     quizids.append(quiz.quizid)
     names.append(quiz.quizname)
     timecreated.append(quiz.timecreated)
-  data = zip(names,quizids)
-  return render_template("dashboard.html",data=data,uname=name,timecreated=timecreated)
+  data = zip(names, quizids)
+  return render_template("dashboard.html",
+                         data=data,
+                         uname=name,
+                         timecreated=timecreated)
+
 
 @app.route('/login')
 def login():
-    redirect_uri = url_for('authorize', _external=True)
-    return oauth.google.authorize_redirect(redirect_uri)
-  
+  redirect_uri = url_for('authorize', _external=True)
+  return oauth.google.authorize_redirect(redirect_uri)
+
+
 def create_folder_if_not_exists(folder_path):
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-        
-    else:
-        pass
+  if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
+
+  else:
+    pass
+
+
 @app.route('/check/<quizid>')
 def check(quizid):
   quize = quizdb.query.filter_by(quizid=quizid).first()
-  
+
   return redirect(url_for(quize.quizcategory, quizid=quizid))
 
 
 @app.route('/authorize')
 def authorize():
-    token = oauth.google.authorize_access_token()
-    session['user'] = token['userinfo']
-    user = session.get('user')
-    email = user['email']
-    f = open("users.txt", "r")
-    if email in f.read().lower():
-      pass
-    else:
-      f = open("users.txt", "a")
-      f.write(f"{email},")
-      f.close()
-    return redirect('/')
+  token = oauth.google.authorize_access_token()
+  session['user'] = token['userinfo']
+  user = session.get('user')
+  email = user['email']
+  f = open("users.txt", "r")
+  if email in f.read().lower():
+    pass
+  else:
+    f = open("users.txt", "a")
+    f.write(f"{email},")
+    f.close()
+  return redirect('/dashboard')
 
 
 @app.route('/logout')
 def logout():
-    session.pop('user', None)
-    return redirect('/')
+  session.pop('user', None)
+  return redirect('/')
 
 
 @app.route('/makequiz', methods=["POST", "GET"])
@@ -136,9 +149,9 @@ def index():
   user = session.get('user')
   try:
     name = user['name']
-  
+
   except:
-    return render_template("upl.html")
+    return render_template("home.html")
   print(user)
 
   email = user['email']
@@ -162,7 +175,7 @@ def index():
           os.path.join(os.path.abspath(os.path.dirname(__file__)),
                        app.config['UPLOAD_FOLDER'], filename))
 
-        imagelink = "https://quizsage.tushitgarg.com/static/uploads/" + userid + "/"+filename
+        imagelink = "https://quizsage.tushitgarg.repl.co/static/uploads/" + userid + "/" + filename
         imagelinks = imagelinks + imagelink + "@@"
       url = f"https://tushitgarg.pythonanywhere.com/api/{qytype}/{qno}?url={imagelinks}"
 
@@ -199,14 +212,14 @@ def index():
     f.close()
     indian_time = datetime.now(indian_timezone)
     formatted_time = indian_time.strftime('%Y-%m-%d %H:%M:%S')
-    qz= quizdb(userid,quizid,additions,urlpass,formatted_time)
+    qz = quizdb(userid, quizid, additions, urlpass, formatted_time)
     db.session.add(qz)
     db.session.commit()
     clear_directory(f"/static/uploads/{userid}/")
     return redirect(url_for(urlpass, quizid=quizid))
 
   else:
-    return render_template("index.html",email=name)
+    return render_template("index.html", email=name)
 
 
 @app.route('/<usr>')
@@ -239,7 +252,7 @@ def questions(quizid):
         pass
   data = zip(cleanquestions, cleananswers)
 
-  return render_template('questions.html', data=data,quizname=quizname )
+  return render_template('questions.html', data=data, quizname=quizname)
 
 
 @app.route('/quizzes/<quizid>')
@@ -285,7 +298,10 @@ def quizzes(quizid):
   options = split_list(onoptions, 4)
   data = list(zip(onquestions, options))
   if len(cleananswers) == len(onquestions):
-    return render_template('quizzes.html', data=data, quizid=quizid,quizname=quizname)
+    return render_template('quizzes.html',
+                           data=data,
+                           quizid=quizid,
+                           quizname=quizname)
   else:
     return render_template('error.html')
 
@@ -355,12 +371,14 @@ def submitquiz(quizid):
                              correctoptions=correctoptions,
                              useroptions=useroptions,
                              score=score,
-                             lent=len(cleananswers),quizname=quizname)
+                             lent=len(cleananswers),
+                             quizname=quizname)
     else:
       return render_template('error.html')
 
-if __name__ =="__main__":
-  
+
+if __name__ == "__main__":
+
   with app.app_context():
     db.create_all()
   app.run(host='0.0.0.0', port=81, debug=True)
