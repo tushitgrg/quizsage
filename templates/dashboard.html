@@ -52,7 +52,9 @@ body {
       <th scope="col">Sno.</th>
       <th scope="col">Quiz Name</th>
       <th scope="col">Time Created</th>
-      <th scope="col">View</th>
+      <th scope="col">View</th> 
+ <th scope="col">Delete</th>
+
     </tr>
   </thead>
   <tbody>
@@ -64,10 +66,14 @@ body {
       <td>{{timecreated[loop.index0]}}</td>
       
       <td><a class="btn btn-primary" href="/check/{{quizid}}" role="button">View</a></td>
+       <td><a class="btn btn-primary" href="/delete/{{quizid}}" role="button">Delete</a></td>
     </tr>
    {% endfor %}
   </tbody>
 </table>
+{% else %}
+<h3>You Have No Quiz! Create One!</h3>
+{% endif %}
  <a class="btn btn-primary" href="/makequiz" role="button" style="margin:10px">New Quiz!</a>
     <a class="btn btn-primary" href="/logout" role="button" style="margin:10px">Logout</a>
     
@@ -75,9 +81,7 @@ body {
 </html>
 </div>
 
-{% else %}
-<h3>You Have No Quiz! Create One!</h3>
-{% endif %}
+
 
 
 

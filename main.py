@@ -9,8 +9,6 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import pytz
 
-
-
 indian_timezone = pytz.timezone('Asia/Kolkata')
 
 app = Flask(__name__)
@@ -72,12 +70,6 @@ def has_numbers(inputString):
 
 
 @app.route('/')
-def home():
-
-  return render_template("home.html")
-
-
-@app.route('/dashboard')
 def dashboard():
 
   try:
@@ -106,7 +98,7 @@ def dashboard():
 
 @app.route('/login')
 def login():
-  redirect_uri = url_for('authorize', _external=True)
+  redirect_uri = f"{request.url_root}authorize"
   return oauth.google.authorize_redirect(redirect_uri)
 
 
@@ -125,6 +117,15 @@ def check(quizid):
   return redirect(url_for(quize.quizcategory, quizid=quizid))
 
 
+@app.route('/delete/<quizid>')
+def delete(quizid):
+  quize = quizdb.query.filter_by(quizid=quizid).first()
+  db.session.delete(quize)
+  db.session.commit()
+
+  return redirect('/')
+
+
 @app.route('/authorize')
 def authorize():
   token = oauth.google.authorize_access_token()
@@ -138,7 +139,7 @@ def authorize():
     f = open("users.txt", "a")
     f.write(f"{email},")
     f.close()
-  return redirect('/dashboard')
+  return redirect('/')
 
 
 @app.route('/logout')
@@ -149,6 +150,7 @@ def logout():
 
 @app.route('/makequiz', methods=["POST", "GET"])
 def index():
+
   user = session.get('user')
   try:
     name = user['name']
@@ -174,19 +176,13 @@ def index():
       imagelinks = ""
       for file in files:
         filename = secure_filename(file.filename)
-        
-        
-      
-        
-        
-       
 
         file.save(
           os.path.join(os.path.abspath(os.path.dirname(__file__)),
                        app.config['UPLOAD_FOLDER'], filename))
 
-        imagelink = "https://quizsage.tushitgarg.repl.co/static/uploads/" + userid + "/" + filename
-       
+        imagelink = f"{request.url_root}static/uploads/" + userid + "/" + filename
+
         imagelinks = imagelinks + imagelink + "@@"
 
       url = f"https://tushitgarg.pythonanywhere.com/api/{qytype}/{qno}?url={imagelinks}"
